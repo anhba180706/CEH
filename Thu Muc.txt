@@ -1,0 +1,18 @@
+ceh_toolkit/
+├── main.py
+├── requirements.txt
+├── config.yaml
+├── core/
+│   ├── __init__.py
+│   ├── logger.py
+│   ├── base_module.py
+│   └── orchestrator.py
+├── modules/
+│   ├── __init__.py
+│   ├── m02_footprinting.py
+│   ├── m03_scanning.py
+│   ├── m04_enumeration.py
+│   ├── m05_vuln_analysis.py
+│   ├── m11_web_hacking.py
+│   └── report.py
+└── output/

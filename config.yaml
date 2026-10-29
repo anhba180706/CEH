@@ -1,0 +1,44 @@
+# Cấu hình CEH Toolkit
+general:
+  timeout: 300
+  threads: 4
+  output_dir: "./output"
+  log_level: "INFO"
+
+# Các module được kích hoạt theo mặc định
+enabled_modules:
+  - m02_footprinting
+  - m03_scanning
+  - m04_enumeration
+  - m05_vuln_analysis
+  - m11_web_hacking
+
+# Cấu hình từng module
+modules:
+  m02_footprinting:
+    whois: true
+    dns: true
+    subdomain_bruteforce: true
+    theharvester: true
+    google_dorks: true
+    subdomain_wordlist: "/usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt"
+  m03_scanning:
+    scan_type: "service"  # basic | service | full | udp | vuln
+    ports: "1-1000"
+    timing: "T4"
+  m04_enumeration:
+    smb: true
+    snmp: true
+    ldap: true
+    nfs: true
+    smtp: true
+  m05_vuln_analysis:
+    searchsploit: true
+    nikto: true
+    sslscan: true
+  m11_web_hacking:
+    nikto: true
+    whatweb: true
+    wpscan: false
+    dirb: true
+    dirb_wordlist: "/usr/share/wordlists/dirb/common.txt"
